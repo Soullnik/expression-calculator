@@ -19,8 +19,7 @@ function calculate(expr) {
         if (arrExpr[i] === "*") {
             getOperation('*', i)
             i -= 1;
-        }
-        if (arrExpr[i] === "/") {
+        }else if (arrExpr[i] === "/") {
             if (arrExpr[i + 1] === '0') throw new TypeError('TypeError: Division by zero.');
             getOperation('/', i)
             i -= 1;
@@ -30,8 +29,7 @@ function calculate(expr) {
         if (arrExpr[i] === "+") {
             getOperation('+', i);
             i -= 1;
-        }
-        if (arrExpr[i] === "-") {
+        }else if (arrExpr[i] === "-") {
             getOperation('-', i);
             i -= 1;
         }
